@@ -1,0 +1,27 @@
+@font-face {
+  font-family: MonsterFriend;
+  src: url(MonsterFriendBack.otf);
+}
+
+@font-face {
+  font-family: determination;
+  src: url(DTM-Sans.otf);
+}
+
+h1{
+  font-family: MonsterFriend;
+}
+a{
+  font-family: determination;
+}
+p{
+  font-family: determination;
+}
+H5{
+  font-family: determination;
+}
+
+.date{
+  color: white;
+}
+
