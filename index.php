@@ -41,9 +41,6 @@ body {
     margin-top: 2%;
 }
 </style>
-<?php 
-
-?>
 
 <body style="background-color: black;">
     <header>
