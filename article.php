@@ -31,7 +31,7 @@ echo "<div class='card'>
 </head>
 
 <body>
-  <form action="update.php?id=<?php echo $idDuGet; ?>" method="POST" style="display:flex; justify-content:center; align-items:center; flex-direction:column">
+  <form action="update.php?id=<?php echo $idDuGet ?>" method="POST" style="display:flex; justify-content:center; align-items:center; flex-direction:column">
 
     <input type="text" placeholder="Entrer le titre de l'article" name="title">
 
@@ -41,9 +41,11 @@ echo "<div class='card'>
 
   </form>
 
-
-
-
+<?php
+  // var_dump($idDuGet);
+  $rqt = "UPDATE article SET title = $titleInput, content = $contentInput, WHERE id = $idDuGet";
+  echo $rqt;
+?>
 
 </body>
 
