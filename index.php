@@ -1,11 +1,11 @@
-<?php 
+<?php
 session_start();
 
-  require_once "connexionbd.php";
+require_once "connexionbd.php";
 
-  $query = $connexion->prepare("SELECT * FROM article ORDER BY id DESC");
-  $query->execute();
-  $resultat = $query->fetchAll();
+$query = $connexion->prepare("SELECT * FROM article ORDER BY id DESC");
+$query->execute();
+$resultat = $query->fetchAll();
 
 
 ?>
@@ -73,15 +73,15 @@ body {
     </form>
 
     <?php
-        
-        foreach($resultat as $post){
-          
-          
 
-            echo "<div class='card-group m-auto col-6'>
+  foreach ($resultat as $post) {
+
+
+
+    echo "<div class='card-group m-auto col-6'>
                     <div class='card d-flex flex-row col-12 '>
                       <div class='justify-content-begin'>
-                          <img class='card-img' src='".$post[3]."' width='200px' alt=''>
+                          <img class='card-img' src='" . $post[3] . "' width='200px' alt=''>
                       </div>
                           <div class='d-flex flex-column ml-3 col-8 card-body'>
                             <h5 class='justify-content-begin card-title'> " . $post[1] . " </h5>
@@ -91,13 +91,13 @@ body {
                       </div>
                     </div>
                   </div>";
-        }
-        
-        ?>
+  }
+
+  ?>
     </div>
 
 
-<!-- <div class="card-group m-auto divborder col-6">
+    <!-- <div class="card-group m-auto divborder col-6">
   <div class="d-flex flex-row col-12 divborder card">
     <div class="justify-content-begin ">
       <img class="card-img" src="./images/535.jpg" alt="" width="200px">
