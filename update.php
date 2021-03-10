@@ -2,11 +2,10 @@
 
 $idDuGet = $_GET["id"];
 
-if(isset($_POST["submit"])){
-if(!empty($_POST["title"]) AND !empty($_POST["text"])){
+if(!empty($_POST["title"]) AND !empty($_POST["content"])){
 
     $titleInput =  htmlspecialchars($_POST["title"]);
-    $textInput = htmlspecialchars($_POST["text"]);
+    $textInput = htmlspecialchars($_POST["content"]);
 
 
 include 'bdd/bdd.php';
@@ -18,10 +17,10 @@ $query->bindParam(2, $textInput);
 $query->bindParam(3, $idDuGet);
 $query->execute();
 
-        header("Location: article.php?id= $idDuGet");
+        header("Location: article.php?id=$idDuGet");
     }else{
-        header("Location: article.php?id= $idDuGet");
+        header("Location: article.php?id=$idDuGet");
     }
-}
+
 
 ?>
