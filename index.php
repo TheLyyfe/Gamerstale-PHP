@@ -21,7 +21,7 @@ $resultat = $query->fetchAll();
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="CSS/page1.css" />
-    <link rel="stylesheet" href="MDB/css/bootstrap.css" />
+    <link rel="stylesheet" href="MDB/css/bootstrap.css"/>
     <link rel="stylesheet" href="MDB/css/mdb.css">
     <link rel="stylesheet" href="./www/Projet 1/fontawesome-free-5.14.0-web/css/all.min.css">
     <title>Gamerstale - Êtes-vous déterminé ?</title>
@@ -48,10 +48,8 @@ body {
     include 'header.php'
     ?>
     </header>
-    <form action="insert.php" method="POST"
-        style="display:flex; justify-content:center; align-items:center; flex-direction:column"
-        enctype="multipart/form-data">
-
+    <form action="insert.php" method="POST" enctype="multipart/form-data">
+<div class="form-group">
         <input type="text" placeholder="Entrer le titre de l'article" name="title">
         <div class="input-group">
             <!-- <div class="input-group-prepend">
@@ -67,9 +65,9 @@ body {
             </div>
         </div>
 
-        <textarea name="text" cols="30" rows="10" placeholder="text"></textarea>
-        <input type="submit">
-
+        <textarea class="form-control rows="4" name="text" placeholder="Ecrivez votre article"></textarea>
+        <input type="submit" class="btn btn-outline-light">
+</div>
     </form>
 
     <?php
