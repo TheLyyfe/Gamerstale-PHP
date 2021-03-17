@@ -7,7 +7,8 @@ if (isset($_POST['prenom'], $_POST['username'], $_POST['usermail'], $_POST['pass
     
     // $password = password_hash($password, PASSWORD_DEFAULT);
 
-require_once "connexionbd.php";
+include "bdd/bdd.php";
+
 $query = $connexion->prepare("INSERT INTO user(prenom, username, password, usermail) VALUES(?,?,?,?)");
 $query->execute([$prenom, $username, $password, $usermail]);
 header("Location: signin.php");
