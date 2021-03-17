@@ -2,17 +2,13 @@
 
 
 
-$connexion = new PDO("mysql:host=localhost;dbname=gamerstale", "root", "");
+require_once 'bdd/bdd.php';
 
 $idDuGet = $_GET["id"];
-var_dump($_GET);
-var_dump($_POST);
 
 $query = $connexion->prepare("SELECT * FROM article WHERE id = ?");
 $query->execute([$idDuGet]);
 $resultat = $query->fetch();
-var_dump($resultat);
-
 echo "<div class='card'>
 <div class='justify-content-begin'>
                           <img class='card-img' src='" . $resultat[3] . "' width='200px' alt=''>
@@ -38,6 +34,10 @@ echo "<div class='card'>
 </head>
 
 <body>
+<header>
+        <a href="index.php">Gamerstale - Retour</a>
+    </header>
+
   <form action="update.php?id=<?= $idDuGet ?>" method="POST" style="display:flex; justify-content:center; align-items:center; flex-direction:column">
 
     <input type="text" placeholder="Entrer le titre de l'article" name="title">

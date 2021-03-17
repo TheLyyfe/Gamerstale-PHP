@@ -1,6 +1,6 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark">
-  <a class="navbar-brand" style="font-family: MonsterFriend;" href="#">GAMERSTALE</a>
+  <a class="navbar-brand" style="font-family: MonsterFriend;" href="index.php">GAMERSTALE</a>
   <ul class="navbar-nav mr-auto">
     <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
     <li class="nav-item"><a class="nav-link" href="#">Qui sommes-nous ?</a></li>

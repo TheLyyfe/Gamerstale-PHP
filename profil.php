@@ -21,6 +21,9 @@ session_start();
     <title>Profil - Gamerstale</title>
 </head>
 <body>
+    <header>
+    <a href="index.php">Gamerstale</a>
+    </header>
 <h1>Bonjour <?php echo $_SESSION['name']; ?> !</h1>
 </body>
 </html>

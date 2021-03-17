@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once "connexionbd.php";
+require_once 'bdd/bdd.php';
 
 $query = $connexion->prepare("SELECT * FROM article ORDER BY id DESC");
 $query->execute();
@@ -9,9 +9,6 @@ $resultat = $query->fetchAll();
 
 
 ?>
-
-
-
 
 
 

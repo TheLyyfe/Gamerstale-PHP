@@ -1,7 +1,4 @@
 <?php
- var_dump($_FILES);
-
- 
 
     $titleInput =  htmlspecialchars($_POST["title"]);
     $textInput = htmlspecialchars($_POST["text"]);
@@ -17,7 +14,7 @@
         $altnum = mt_rand(100,999);
         var_dump(move_uploaded_file ($_FILES["pic"]["tmp_name"], "images/". $altnum .".". $extensionUpload));
 
-         $connexion = new PDO("mysql:host=localhost;dbname=gamerstale", "root", "");
+        require_once 'bdd/bdd.php';
     
 
     $query = $connexion->prepare("INSERT INTO article(title, content, pic) VALUES(?,?,?)");

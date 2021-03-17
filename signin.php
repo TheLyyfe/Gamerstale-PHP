@@ -6,12 +6,12 @@ if (isset($_POST['usermail'], $_POST['password'], $_POST['submit'])){
     $usermail = $_POST['usermail'];
     $password = $_POST['password'];
 
-require_once "connexionbd.php";
+    require_once 'bdd/bdd.php';
 
     $query = $connexion->prepare("SELECT * FROM user WHERE usermail = ?");
     $query->execute([$usermail]);
     $machin = $query->fetch();
-  var_dump($machin);
+
 
   if ($machin["password"] == $password) {
       echo "C'est bon";
